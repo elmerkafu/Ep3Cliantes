@@ -1,6 +1,5 @@
 package com.Ep3.Ep3Clientes.controladores;
 
-import com.Ep3.Ep3Clientes.entidades.Clientes;
 import com.Ep3.Ep3Clientes.entidades.Visitas;
 import com.Ep3.Ep3Clientes.servicios.ClienteService;
 import lombok.AllArgsConstructor;
@@ -9,7 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -18,11 +16,6 @@ import java.util.List;
 @Controller
 @RequestMapping("/home")
 public class HomeController {
-
-    @GetMapping("/login")
-    public String login(){
-        return "login";
-    }
 
     private final ClienteService clienteService;
     @GetMapping("")
